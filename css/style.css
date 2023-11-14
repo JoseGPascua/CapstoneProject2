@@ -1,0 +1,48 @@
+body{
+    background: #eee;
+}
+#top-bar {
+    background: rgb(216, 216, 189);
+}
+
+#side-nav{
+    background: rgb(216, 216, 189);
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 1s;
+}
+
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sidebar li.active{
+    background: #fff;
+}
+
+.sidebar li.active a,
+.sidebar li.active a:hover {
+    color: rgb(180, 180, 160);
+    font-weight: 500;
+}
+.sidebar li a{
+    color:#fff;
+}
+
+/* Hover state styles */
+.sidebar a:hover {
+    color: rgb(180, 180, 160); /* Font color when hovering over the link */
+}
+
+@media(max-width: 575px){
+    #side-nav{
+        margin-left: -250px;
+        position:fixed;
+        min-height: 100vh;
+        z-index: 1;
+    }
+    #side-nav .active{
+        margin-left: 0;
+    }
+}
