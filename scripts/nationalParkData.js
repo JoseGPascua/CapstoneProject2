@@ -1,5 +1,9 @@
 const nationalParksArray = [
     {
+    LocationID: "Default",
+    LocationName: "Select a Specfic Park by Name"
+    },
+    {
     LocationID: "ABLI",
     LocationName: "Abraham Lincoln Birthplace National Historical Park",
     Address: "2995 Lincoln Farm Road",
