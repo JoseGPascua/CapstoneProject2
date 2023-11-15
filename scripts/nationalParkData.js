@@ -1,6 +1,5 @@
 const nationalParksArray = [
     {
-    LocationID: "Default",
     LocationName: "Select a Specfic Park by Name"
     },
     {

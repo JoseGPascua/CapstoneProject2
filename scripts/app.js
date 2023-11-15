@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 window.onload = () => {
     addLocationsToDropdown();
     addNationalParksToDropdown();
