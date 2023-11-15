@@ -78,7 +78,7 @@ function addNationalParksToDropdown() {
 
 function createNationalParkCard(park) {
 
-    return `<div class="card" style="width: 18rem;">
+    return `<div class="card my-2 mx-2" style="width: 18rem;">
         <img src="${park.imageURL}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">${park.LocationName}</h5>
