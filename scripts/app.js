@@ -7,6 +7,7 @@ window.onload = () => {
 }
 
 function init() {
+    // Create a search button
     const searchBtn = document.getElementById("searchBtn");
     searchBtn.addEventListener("click", filterDropdown);
 }
@@ -76,6 +77,7 @@ function addNationalParksToDropdown() {
     });
 }
 
+// Function to create a card for the park's information
 function createNationalParkCard(park) {
 
     return `<div class="card my-2 mx-2" style="width: 18rem;">
@@ -89,19 +91,23 @@ function createNationalParkCard(park) {
     </div>`;
 }
 
+// Function to display National Park by name
 function displayNationalParkLocationName(selectedValue) {
+    // Create a variable that stores parks that are filtered from the nationalParksArray using the filter method with arrow function
     const filteredParks = nationalParksArray.filter(park => park.LocationName === selectedValue);
-    return filteredParks.map(park => createNationalParkCard(park));
+    return filteredParks.map(park => createNationalParkCard(park));     // Return the filteredPark as a card by using the map method and placing each array element into the createNationalPark function
 }
-
+// Function to display National Park by state
 function displayNationalParkByState(selectedValue) {
+    // Create a variable that stores parks that are filtered by state from the nationalParksArray using the filter method with arrow function
     const filteredParks = nationalParksArray.filter(park => park.State === selectedValue);
-    return filteredParks.map(park => createNationalParkCard(park)).join("");
+    return filteredParks.map(park => createNationalParkCard(park)).join("");    // Return the filteredPark as a card by using the map method and placing each array element into the createNationalPark function
 }
-
+// Function to display National Park by park type
 function displayNationalParkByParkType(selectedValue) {
+    // Create a variable that stores parks that are filtered by park type from the nationalParksArray using the filter method with arrow function
     const filteredParks = nationalParksArray.filter(park => park.LocationName.toLowerCase().includes(selectedValue.toLowerCase()));
-    return filteredParks.map(park => createNationalParkCard(park)).join("");
+    return filteredParks.map(park => createNationalParkCard(park)).join("");    // Return the filteredPark as a card by using the map method and placing each array element into the createNationalPark function
 }
 
 // Filtering function based on dropdown selections
