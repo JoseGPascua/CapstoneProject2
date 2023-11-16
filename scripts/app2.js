@@ -41,26 +41,21 @@ function addMountainToDropdown() {
 
 const listOfMountains = document.getElementById("listOfMountains");
 
-function displayMountain() {
-    const selectedMountain = document.getElementById("mountains").value;
-    console.log("Selected mountain:", selectedMountain);
-
-    const filteredMountains = mountainsArray.filter(mountain => mountain.name === selectedMountain);
-    console.log("Filtered mountains:", filteredMountains);
-    let mountainCardHTML = "";
-
-    filteredMountains.forEach(mountain => {
-        mountainCardHTML += `<div class="card" style="width: 18rem;">
-            <img src="${mountain.img}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">${mountain.name}</h5>
-                <p class="card-text">Description: ${mountain.desc}</p>
-                <p class="card-text">Effort: ${mountain.effort}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>`;
-    });
-
-    listOfMountains.innerHTML = mountainCardHTML;
+function createMountainCard(mountain) {
+    return `<div class="card" style="width: 32rem;">
+        <img src="${mountain.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4 class="card-title">${mountain.name}</h4>
+            <p class="card-text"><b>Description:</b> ${mountain.desc}</p>
+            <p class="card-text"><b>Elevation:</b> ${mountain.elevation} feet [${Math.round((mountain.elevation)*0.3048)} metres]</p>
+            <p class="card-text"><b>Coordinates:</b> ${mountain.coords.lat}, ${mountain.coords.lng}</p>
+        </div>
+    </div>`;
 }
 
+function displayMountain() {
+    const selectedMountain = document.getElementById("mountains").value;
+    const filteredMountains = mountainsArray.filter(mountain => mountain.name === selectedMountain);
+    const mountainCardHTML = filteredMountains.map(mountain => createMountainCard(mountain));
+    listOfMountains.innerHTML = mountainCardHTML;
+};
