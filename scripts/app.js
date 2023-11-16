@@ -9,7 +9,9 @@ window.onload = () => {
 function init() {
     // Create a search button
     const searchBtn = document.getElementById("searchBtn");
+    const clearBtn = document.getElementById("clearBtn");
     searchBtn.addEventListener("click", filterDropdown);
+    clearBtn.addEventListener("click", resetSearchDropdowns);
 }
 
 // Function to toggle the sidebar
@@ -116,7 +118,7 @@ function filterDropdown() {
     const selectedState = document.getElementById("states").value;
     const selectedParkType = document.getElementById("parkType").value;
 
-    let filteredHTML = '';
+    let filteredHTML = "";
 
     if (selectedLocationName !== "Select a Specfic Park by Name") {
         filteredHTML = displayNationalParkLocationName(selectedLocationName);
@@ -127,6 +129,16 @@ function filterDropdown() {
     }
 
     document.getElementById("listOfParks").innerHTML = filteredHTML;
+}
+
+function resetSearchDropdowns() {
+    document.getElementById("locationName").selectedIndex = 0;
+    document.getElementById("states").selectedIndex = 0;
+    document.getElementById("parkType").selectedIndex = 0;
+
+    let clearCards = "";
+
+    document.getElementById("listOfParks").innerHTML = clearCards;
 }
 
 init();
