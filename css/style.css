@@ -10,18 +10,33 @@ body{
     background-repeat: repeat;
 }
 
-#side-nav{
+#side-nav {
     background: rgb(216, 216, 189);
+    height: auto;
     min-width: 250px;
     max-width: 250px;
     transition: all 0.5s;
     background-image: url("../images/background-images/side-bar-img.jpg");
     background-repeat: repeat;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.content{
+.content {
     min-height: 100vh;
     width: 100%;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 140px;
+    color: rgb(180, 180, 160);
+    font-weight: 800;
+    transition: opacity 0.3s ease;
+}
+
+.content h1:hover {
+    opacity: 0.5;
 }
 
 .sidebar li.active{
@@ -58,6 +73,42 @@ body{
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.card-body {
-    color: #000;
+
+
+.main-title {
+    display: block;
+}
+
+@media screen and (max-width: 575px) {
+    .main-title {
+        display: none;
+    }
+}
+
+.card.card-with-image {
+    width: 18rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 435px;
+    max-height: 435px;
+    border: none;
+    color: rgb(180, 180, 160);
+}
+
+.card.card-with-image .card-img-top {
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.card.card-with-image .card-img-top:hover {
+    opacity: 0.5; /* Reduce opacity on hover (adjust value as needed) */
+}
+
+.text-center.mx-5.p-2 {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(180, 180, 160);
+    border-radius: 10px;
+}
+
+.text-center.mx-5.p-2:hover {
+    opacity: 0.5;
 }
