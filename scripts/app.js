@@ -81,17 +81,38 @@ function addNationalParksToDropdown() {
 
 // Function to create a card for the park's information
 function createNationalParkCard(park) {
-
-    return `<div class="card my-2 mx-2" style="width: 18rem;">
-        <img src="${park.imageURL}" class="card-img-top" alt="...">
+    let parkCard = `<div class="card my-2 mx-2" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">${park.LocationName}</h5>
-            <p class="card-text">Phone: ${park.Phone}</p>
-            <p class="card-text">Fax: ${park.Fax}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+            <p class="card-text">Location: ${park.City}, ${park.State}</p>`;
+
+    if (park.Address) {
+        parkCard += `<p class="card-text">Address: ${park.Address}</p>`;
+    }
+
+    if (park.ZipCode) {
+        parkCard += `<p class="card-text">Zipcode: ${park.ZipCode}</p>`;
+    }
+
+    if (park.Phone) {
+        parkCard += `<p class="card-text">Phone: ${park.Phone}</p>`;
+    }
+
+    if (park.Fax) {
+        parkCard += `<p class="card-text">Fax: ${park.Fax}</p>`;
+    }
+
+    if (park.Visit) {
+        parkCard += `<p class="card-text">For more information: ${park.Visit}</p>`;
+    }
+
+    parkCard += `</div>
     </div>`;
+
+    return parkCard;
 }
+
+
 
 // Function to display National Park by name
 function displayNationalParkLocationName(selectedValue) {
