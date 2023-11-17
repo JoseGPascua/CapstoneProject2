@@ -12,15 +12,19 @@ This project is built on the idea of giving people a place to search for differe
 The following below are previews of each page
 
 ### Home Page
-<img src="images/" alt="home page" width=400px>
+<img src="images/homepage.PNG" alt="home page" width=400px>
 
 ### Mountains Page
-<img src="images/" alt="home page" width=400px>
+<img src="images/moutainspage.PNG" alt="mountains page" width=400px>
 
 ### National Parks Page
-<img src="images/" alt="home page" width=400px>
+<img src="images/parkspage.PNG" alt="national parks page" width=400px>
 
 ## An interesting piece of Javascript
+
+This piece of code is what probably took me the longest and is something that I couldn't get to work for awhile. I wanted to be able to just use search button for all of my dropdowns and I couldn't figure out how to, and after doing some research online I was able to implement this function properly.
+
+Basically what it does is set the variables for the values that are selected on the dropdown menus, and it uses an if else-if block to check what the selected value is. Depending on if the value has not been changed from the default, it will pass on to the next else-if. Inside each of these statements sets an empty string variable that was initialized before the If statement and stores in the information from a different function (the functions are all different but perform the same thing but for different dropdowns. Each function takes in an argument and finds the specific park then returns a card that was generated from a different function that adds HTML elements).
 
 ```
 // Filtering function based on dropdown selections
@@ -42,3 +46,15 @@ function filterDropdown() {
         filteredHTML = displayNationalParkByParkType(selectedParkType);
     }
 ```
+
+# Author
+
+Jose Pascua
+
+# Acknowledgements
+
+* Year Up Staff
+* Year Up Classmates
+* Remsey Mailjard (Instructor)
+* Pluralsight
+* Learn To Code Academy
