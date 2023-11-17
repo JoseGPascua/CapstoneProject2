@@ -84,35 +84,27 @@ function createNationalParkCard(park) {
     let parkCard = `<div class="card my-2 mx-2" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">${park.LocationName}</h5>
-            <p class="card-text">Location: ${park.City}, ${park.State}</p>`;
-
+            <p class="card-text"><b>Location:</b> ${park.City}, ${park.State}</p>`;
     if (park.Address) {
-        parkCard += `<p class="card-text">Address: ${park.Address}</p>`;
+        parkCard += `<p class="card-text"><b>Address:</b> ${park.Address}</p>`;
     }
-
     if (park.ZipCode) {
-        parkCard += `<p class="card-text">Zipcode: ${park.ZipCode}</p>`;
+        parkCard += `<p class="card-text"><b>Zipcode:</b> ${park.ZipCode}</p>`;
     }
-
     if (park.Phone) {
-        parkCard += `<p class="card-text">Phone: ${park.Phone}</p>`;
+        parkCard += `<p class="card-text"><b>Phone:</b> ${park.Phone}</p>`;
     }
-
     if (park.Fax) {
-        parkCard += `<p class="card-text">Fax: ${park.Fax}</p>`;
+        parkCard += `<p class="card-text"><b>Fax:</b> ${park.Fax}</p>`;
     }
-
     if (park.Visit) {
-        parkCard += `<p class="card-text">For more information: ${park.Visit}</p>`;
+        parkCard += `<p class="card-text"><b>For more information:</b> <a href="${park.Visit}"  style="color: blue" onmouseover="this.style.color='white'" onmouseout="this.style.color='blue'" target="_blank">${park.Visit}</a></p>`;
     }
-
     parkCard += `</div>
     </div>`;
 
     return parkCard;
 }
-
-
 
 // Function to display National Park by name
 function displayNationalParkLocationName(selectedValue) {
