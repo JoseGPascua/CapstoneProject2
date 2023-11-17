@@ -75,7 +75,7 @@ body.nationalPark-body{
 }
 /* Makes title disappear from home screen on smaller devices */
 @media screen and (max-width: 575px) {
-    .main-title.pt-5 {
+    .main-title.py-4 {
         display: none;
     }
 }
