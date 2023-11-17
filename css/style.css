@@ -1,15 +1,22 @@
+/* Background for home page */
 body{
     background-image: url("../images/background-images/costarica.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-#top-bar {
-    background: rgb(216, 216, 189);
-    background-image: url("../images/background-images/side-bar-img.jpg");
-    background-repeat: repeat;
+/* Background for mountain page */
+body.mountains-body{
+    background-image: url("../images/background-images/shasta-bg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+/* Background for national park page */
+body.nationalPark-body{
+    background-image: url("../images/background-images/joshua-tree-bg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Styling for custom navigation bar */
 #side-nav {
     background: rgb(216, 216, 189);
     height: auto;
@@ -20,39 +27,37 @@ body{
     background-repeat: repeat;
     font-family: "Lucida Console", "Courier New", monospace;
 }
-
+/* Styling for content section of page */
 .content {
     min-height: 100vh;
     width: 100%;
     font-family: "Lucida Console", "Courier New", monospace;
 }
-
+/* Styling for the title on home page */
 .content h1 {
     text-align: center;
-    font-size: 140px;
-    color: rgb(180, 180, 160);
-    font-weight: 800;
-    transition: opacity 0.3s ease;
+    font-size: 100px;
+    color: white;
 }
-
+/* Background color for active list item on sidebar */
 .sidebar li.active{
     background: #fff;
 }
-
+/* Color of active sidebar list item */
 .sidebar li.active a,
 .sidebar li.active a:hover {
-    color: rgb(180, 180, 160);
+    color: black;
     font-weight: 500;
 }
+/* Color of sidebar list item when not hovered over */
 .sidebar li a{
     color:#fff;
 }
-
-/* Hover state styles */
+/* Changes color on sidebar list items when hovering over */
 .sidebar a:hover {
-    color: rgb(180, 180, 160); /* Font color when hovering over the link */
+    color: rgb(180, 180, 160);
 }
-
+/* Make the side-bar disappear on smaller devices */
 @media(max-width: 575px){
     #side-nav{
         margin-left: -250px;
@@ -64,43 +69,60 @@ body{
         margin-left: 0;
     }
 }
-
-.card {
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-
-
-.main-title {
+/* Display block for main title */
+.main-title.py-4 {
     display: block;
 }
-
+/* Makes title disappear from home screen on smaller devices */
 @media screen and (max-width: 575px) {
-    .main-title {
+    .main-title.pt-5 {
         display: none;
     }
 }
 
+/* Home page card styling and size */
 .card.card-with-image {
     width: 18rem;
     position: relative;
     overflow: hidden;
-    min-height: 435px;
-    max-height: 435px;
+    min-height: 485px;
+    max-height: 485px;
     border: none;
-    color: rgb(180, 180, 160);
+    
 }
-
+ /* Transition for home page card buttons */
 .card.card-with-image .card-img-top {
-    transition: opacity 0.3s ease; /* Smooth transition */
+    transition: opacity 0.3s ease;
 }
-
+/* Opacity for front page button to change after hover*/
 .card.card-with-image .card-img-top:hover {
-    opacity: 0.5; /* Reduce opacity on hover (adjust value as needed) */
+    opacity: 0.5;
 }
-
+/* Styling for cards on mountain and national park page */
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+}
+/* Styling for the text on home page */
 .text-center.mx-5.p-2 {
     background-color: rgba(255, 255, 255, 0.7);
-    color: rgb(180, 180, 160);
+    color: white;
     border-radius: 10px;
+}
+
+/* Colored the mountain and national page colors as white */
+.mb-3.header-text {
+    color: white;
+}
+
+/* Styling for buttons */
+#searchBtn {
+    background-image: url("../images/background-images/side-bar-img.jpg");
+    border: none;
+}
+
+#clearBtn {
+    background-image: url("../images/background-images/side-bar-img.jpg");
+    background-color: rgb(10,17,33) !important;
+    border: none;
 }

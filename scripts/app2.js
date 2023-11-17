@@ -42,10 +42,10 @@ function addMountainToDropdown() {
 const listOfMountains = document.getElementById("listOfMountains");
 
 function createMountainCard(mountain) {
-    return `<div class="card" style="width: 32rem;">
+    return `<div class="card" style="width: 28rem;">
         <img src="${mountain.img}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h4 class="card-title">${mountain.name}</h4>
+            <h4 class="card-title"><b>${mountain.name}</b></h4>
             <p class="card-text"><b>Description:</b> ${mountain.desc}</p>
             <p class="card-text"><b>Elevation:</b> ${mountain.elevation} feet [${Math.round((mountain.elevation)*0.3048)} metres]</p>
             <p class="card-text"><b>Coordinates:</b> ${mountain.coords.lat}, ${mountain.coords.lng}</p>

@@ -83,7 +83,7 @@ function addNationalParksToDropdown() {
 function createNationalParkCard(park) {
     let parkCard = `<div class="card my-2 mx-2" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">${park.LocationName}</h5>
+            <h5 class="card-title"><b>${park.LocationName}</b></h5>
             <p class="card-text"><b>Location:</b> ${park.City}, ${park.State}</p>`;
     if (park.Address) {
         parkCard += `<p class="card-text"><b>Address:</b> ${park.Address}</p>`;
