@@ -105,7 +105,7 @@ body.nationalPark-body{
 }
 /* Styling for the text on home page */
 .text-center.mx-5.p-2 {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.4);
     color: white;
     border-radius: 10px;
 }

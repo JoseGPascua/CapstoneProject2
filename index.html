@@ -4,38 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Enjoy The Outdoors</title>
+
+    <!-- CSS links used for this project -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Main content of the body -->
     <main>
-        
+        <!-- Contains all of the content in one container -->
         <div class="main-container d-flex">
+            <!-- Navigation in the form of a sidebar -->
             <div class="sidebar" id="side-nav">
                 <div class="header-box px-2 py-2 d-flex justify-content-between">
                     <h1 class="fs-3 px-2"><span class="text-white">Outdoor Adventure</span></h1>
                     <button class="btn d-lg-none d-sm-none d-md-none d-block px-2 text-white" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
                 </div>
-                
                 <ul class="list-unstyled px-2">
                     <li class="active"><a href="index.html" class="text-decoration-none d-block px-2 py-2"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li class=""><a href="mountains.html" class="text-decoration-none d-block px-2 py-2"><i class="fa-solid fa-mountain"></i> Mountains</a></li>
                     <li class=""><a href="nationalParks.html" class="text-decoration-none d-block px-2 py-2"><i class="fa-solid fa-person-hiking"></i> National Parks</a></li>
                     <li class=""><a href="#" class="text-decoration-none d-block px-2 py-2"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
                 </ul>
-
             </div>
+            <!-- Contents inside the page -->
             <div class="content">
-                <div class="d-inline-block py-3" style="width: 50px;">
+                <!-- Toggle button for the side navigation bar -->
+                <div class="d-inline-block py-3">
                     <button class="pt-2 btn d-block px-2 text-white" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
                 </div>
-                <div class="container-fluid">
+                <!-- Section for the contents under the toggle button and the right of the navigation bar -->
+                <section class="container-fluid">
+                    <!-- Descriptive text -->
                     <h1 class="main-title py-4">Outdoor Adventure</h1>
                     <h4 class="text-center mx-5 p-2">Looking for a beautiful mountain to hike around or check out an amazing national park for your next trip?
                         This website will help you explore and learn all sorts of places to visit in North America!
                     </h4>
+                    <!-- Container for the cards that act as buttons for the other pages of the website that uses rows and columns for alignment -->
                     <div class="container mt-5 pt-5 d-flex justify-content-center">
                         <div class="row d-flex justify-content-center">
+                            <!-- First card for the mountains page -->
                             <div class="col-sm-12 col-md-6 col-lg-5 mb-3 d-flex justify-content-center">
                                 <div class="card card-with-image" style="width: 18rem; position: relative;">
                                     <a href="mountains.html">
@@ -49,7 +57,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Divider column, it is empty -->
                             <div class="col-lg-2"></div>
+                            <!-- Card designed for the national parks page -->
                             <div class="col-sm-12 col-md-6 col-lg-5 mb-3 d-flex justify-content-center">
                                 <div class="card card-with-image" style="width: 18rem; position: relative;">
                                     <a href="nationalParks.html">
@@ -60,17 +70,19 @@
                                     </div>
                                     <div class="card-body d-flex justify-content-start">
                                         <p>Discover a range of state parks! Within every state you'll be able to find one in our system!</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                        </div>
                     </div>
-                </div>
-                
+                    
+                </section>
             </div>
         </div>
     </main>
-
+    <!-- Footer section -->
     <footer></footer>
+    <!-- Scripts section -->
     <script src="https://kit.fontawesome.com/9281e8684f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="scripts/app.js"></script>

@@ -1,11 +1,11 @@
 "use strict";
 
+// Load these functions as soon as the window loads
 window.onload = () => {
+    // Functions to add options to dropdown
     addMountainToDropdown();
-    init();
-}
 
-function init() {
+    // Create variable for button and add an event listener to it
     const searchBtn = document.getElementById("searchBtn");
     searchBtn.addEventListener("click", displayMountain);
 }
@@ -24,23 +24,25 @@ function toggleSidebar() {
     }
 }
 
+// Function to add mountain to the dropdown
 function addMountainToDropdown() {
     
-    const mountainDropdown = document.getElementById("mountains");
-
+    const mountainDropdown = document.getElementById("mountains");  // Get dropdown element by ID
+    // Use for-each to iterate over the array
     mountainsArray.forEach(function(mountain) {
 
-        let option = document.createElement("option")
+        let option = document.createElement("option")       // Create a new option element
 
+        // Set the value and text content for the new option
         option.value = mountain.name;
         option.textContent = mountain.name;
 
+        // Add the new option to the dropdown
         mountainDropdown.appendChild(option);
     })
 }
 
-const listOfMountains = document.getElementById("listOfMountains");
-
+// Function that creates the card elements by taking in an argument passed by the displayMountain function
 function createMountainCard(mountain) {
     return `<div class="card" style="width: 28rem;">
         <img src="${mountain.img}" class="card-img-top" alt="...">
@@ -53,9 +55,16 @@ function createMountainCard(mountain) {
     </div>`;
 }
 
+// Function to display the mountain
 function displayMountain() {
+    // Grabs the ID of the HTML element that will be used to place the card in
+    const listOfMountains = document.getElementById("listOfMountains");
+    // Variable that stores the value from the dropdown
     const selectedMountain = document.getElementById("mountains").value;
+    // Variable that stores the mountain object that was filtered using the filter method specficially with the same value as the selectedMountain
     const filteredMountains = mountainsArray.filter(mountain => mountain.name === selectedMountain);
+    // Variable that stores the object that is turned into an HTML card after it is passed onto the createMountainCard function through the map method
     const mountainCardHTML = filteredMountains.map(mountain => createMountainCard(mountain));
+    // Displays the Card onto the HTML page
     listOfMountains.innerHTML = mountainCardHTML;
 };
